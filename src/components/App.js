@@ -6,6 +6,8 @@ import ManageCoursePage from "./courses/ManageCoursePage";
 import NotFoundPage from "./NotFoundPage";
 import Header from "./common/Header";
 import { Route, Switch, Redirect } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 	return (
@@ -20,6 +22,7 @@ function App() {
 				<Redirect from="/about-page" to="/about" />
 				<Route component={NotFoundPage} />
 			</Switch>
+			<ToastContainer autoClose={3000} hideProgressBar />
 		</div>
 	);
 }
